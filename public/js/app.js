@@ -1,6 +1,3 @@
-function doSum() { alert("Client side JavaScript is totally loaded."); }
-console.log("Yeah...i guess client side javascript is loaded....");
-
 function getWeather(locality) {
     fetch(`http://localhost:3000/weather?address=${locality}`, {
         mode: 'no-cors',
