@@ -1,5 +1,5 @@
 function getWeather(locality) {
-    fetch(`http://localhost:3000/weather?address=${locality}`, {
+    fetch(`/weather?address=${locality}`, {
         mode: 'no-cors',
         headers: {
             'Content-Type': 'applicaton/json'
