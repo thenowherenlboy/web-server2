@@ -32,9 +32,10 @@ const forecast2 = (latitude, longitude, callback) => {
             weatherObj = {
                 temp: response.body.main.temp,
                 feelsLike: response.body.main.feels_like,
-                description: response.body.weather[0].description
+                description: response.body.weather[0].description,
+                humidity: response.body.main.humidity
             }
-            var weatherString = `Weather/sky condition: ${weatherObj.description}. Current temperature is ${weatherObj.temp}°F; it feels like ${weatherObj.feelsLike}°F.`
+            var weatherString = `Weather/sky condition: ${weatherObj.description}. Current temperature is ${weatherObj.temp}°F; it feels like ${weatherObj.feelsLike}°F. Humidity is ${weatherObj.humidity}%.`
             callback(undefined, weatherString);
         }
 
